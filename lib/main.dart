@@ -77,6 +77,29 @@ class DemoCard extends StatelessWidget {
                   ),
                   subtitle: Text('Jawa Timur, Indonesia'),
                 ),
+                Container(
+                  padding: const EdgeInsets.only(left: 8, right: 8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      OutlinedButton(
+                        onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                          side: const BorderSide(color: Colors.blue),
+                        ),
+                        child: const Icon(Icons.map),
+                      ),
+                      const SizedBox(width: 10),
+                      OutlinedButton(
+                        onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                          side: const BorderSide(color: Colors.blue),
+                        ),
+                        child: const Icon(Icons.phone),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),

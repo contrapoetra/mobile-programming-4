@@ -1,108 +1,71 @@
 import 'package:flutter/material.dart';
+// import 'tests.dart'
 
 void main() {
-  runApp(const DemoCard());
+  runApp(const MyApp());
 }
 
-class DemoSizedBox extends StatelessWidget {
-  const DemoSizedBox({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Contoh SizedBox',
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.amber,
-          title: const Text('Contoh SizedBox'),
-        ),
-        body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // kotakUji(Colors.amber),
-              // const SizedBox(width: 25, height: 25),
-              // SizedBox(width: 100, height: 100, child: kotakUji(Colors.green)),
-              // const SizedBox(width: 25, height: 25),
-              // kotakUji(Colors.blue),
+      title: 'Flutter Demo',
+      theme: ThemeData.dark(),
+      home: const MyHomePage(),
+    );
+  }
+}
 
-              kotakUji(Colors.amber),
-              const Spacer(flex: 1),
-              kotakUji(Colors.green),
-              const Spacer(flex: 2),
-              kotakUji(Colors.blue),
-            ],
-          ),
-        ),
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sedang memutar', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        centerTitle: true,
       ),
-    );
-  }
-
-  Container kotakUji(Color warna) {
-    return Container(
-      height: 75,
-      width: 75,
-      color: warna,
-    );
-  }
-}
-
-class DemoCard extends StatelessWidget {
-  const DemoCard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Demo Card',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Card Demo'),
-          backgroundColor: Colors.amber,
-        ),
-        body: Center(
-          child: Card(
-            margin: const EdgeInsets.all(8),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const ListTile(
-                  leading: Icon(
-                    Icons.location_pin,
-                    color: Colors.red,
-                  ),
-                  title: Text(
-                    'Taman Nasional Bromo Tengger Semeru',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('Jawa Timur, Indonesia'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: EdgeInsets.all(16),
+              child: Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
                 ),
-                Container(
-                  padding: const EdgeInsets.only(left: 8, right: 8),
+                child: Container(
+                  padding: EdgeInsets.all(16),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      OutlinedButton(
-                        onPressed: () {},
-                        style: OutlinedButton.styleFrom(
-                          side: const BorderSide(color: Colors.blue),
-                        ),
-                        child: const Icon(Icons.map),
+                      Icon(Icons.album, size: 100),
+                      SizedBox(width: 16),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Judul Lagu', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                          Text('Artis', style: TextStyle(fontSize: 16)),
+                        ],
                       ),
-                      const SizedBox(width: 10),
-                      OutlinedButton(
-                        onPressed: () {},
-                        style: OutlinedButton.styleFrom(
-                          side: const BorderSide(color: Colors.blue),
-                        ),
-                        child: const Icon(Icons.phone),
-                      ),
+                      Spacer(),
+                      Icon(Icons.favorite),
+                      SizedBox(width: 16),
                     ],
-                  ),
+                  )
                 )
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

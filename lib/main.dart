@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const DemoSizedBox());
+  runApp(const DemoCard());
 }
 
 class DemoSizedBox extends StatelessWidget {
@@ -44,6 +44,26 @@ class DemoSizedBox extends StatelessWidget {
       height: 75,
       width: 75,
       color: warna,
+    );
+  }
+}
+
+class DemoCard extends StatelessWidget {
+  const DemoCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Demo Card',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Card Demo'),
+          backgroundColor: Colors.amber,
+        ),
+        body: Center(
+          child: Text("Halo Flutter!"),
+        ),
+      ),
     );
   }
 }

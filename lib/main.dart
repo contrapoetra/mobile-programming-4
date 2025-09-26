@@ -53,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Judul Lagu', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                          Text('Artis', style: TextStyle(fontSize: 16)),
+                          Text('Echo of My Shadow', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                          Text('AURORA', style: TextStyle(fontSize: 16)),
                         ],
                       ),
                       Spacer(),

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             children: [
               kotakUji(Colors.amber),
               const SizedBox(width: 25, height: 25),
-              kotakUji(Colors.green),
+              SizedBox(width: 100, height: 100, child: kotakUji(Colors.green)),
               const SizedBox(width: 25, height: 25),
               kotakUji(Colors.blue),
             ],

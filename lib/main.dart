@@ -66,7 +66,17 @@ class DemoCard extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-
+                const ListTile(
+                  leading: Icon(
+                    Icons.location_pin,
+                    color: Colors.red,
+                  ),
+                  title: Text(
+                    'Taman Nasional Bromo Tengger Semeru',
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text('Jawa Timur, Indonesia'),
+                ),
               ],
             ),
           ),

@@ -61,7 +61,15 @@ class DemoCard extends StatelessWidget {
           backgroundColor: Colors.amber,
         ),
         body: Center(
-          child: Text("Halo Flutter!"),
+          child: Card(
+            margin: const EdgeInsets.all(8),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+
+              ],
+            ),
+          ),
         ),
       ),
     );

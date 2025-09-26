@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               kotakUji(Colors.amber),
+              const SizedBox(width: 25, height: 25),
               kotakUji(Colors.green),
+              const SizedBox(width: 25, height: 25),
               kotakUji(Colors.blue),
             ],
           ),
